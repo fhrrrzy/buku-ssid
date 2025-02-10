@@ -6,6 +6,28 @@
       'EloquentSerialize' => 'AnourValar\\EloquentSerialize\\Facades\\EloquentSerializeFacade',
     ),
   ),
+  'asosick/filament-layout-manager' => 
+  array (
+    'aliases' => 
+    array (
+      'FilamentLayoutManager' => 'Asosick\\FilamentLayoutManager\\FilamentLayoutManager',
+    ),
+    'providers' => 
+    array (
+      0 => 'Asosick\\FilamentLayoutManager\\FilamentLayoutManagerServiceProvider',
+    ),
+  ),
+  'bezhansalleh/filament-shield' => 
+  array (
+    'aliases' => 
+    array (
+      'FilamentShield' => 'BezhanSalleh\\FilamentShield\\Facades\\FilamentShield',
+    ),
+    'providers' => 
+    array (
+      0 => 'BezhanSalleh\\FilamentShield\\FilamentShieldServiceProvider',
+    ),
+  ),
   'blade-ui-kit/blade-heroicons' => 
   array (
     'providers' => 
@@ -91,6 +113,13 @@
       0 => 'Filament\\Notifications\\NotificationsServiceProvider',
     ),
   ),
+  'filament/spatie-laravel-settings-plugin' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\SpatieLaravelSettingsPluginServiceProvider',
+    ),
+  ),
   'filament/support' => 
   array (
     'providers' => 
@@ -110,6 +139,13 @@
     'providers' => 
     array (
       0 => 'Filament\\Widgets\\WidgetsServiceProvider',
+    ),
+  ),
+  'genealabs/laravel-model-caching' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'GeneaLabs\\LaravelModelCaching\\Providers\\Service',
     ),
   ),
   'guava/filament-knowledge-base' => 
@@ -248,11 +284,53 @@
       0 => 'Spatie\\Activitylog\\ActivitylogServiceProvider',
     ),
   ),
+  'spatie/laravel-permission' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Permission\\PermissionServiceProvider',
+    ),
+  ),
+  'spatie/laravel-settings' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelSettings\\LaravelSettingsServiceProvider',
+    ),
+  ),
+  'spatie/laravel-sitemap' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Sitemap\\SitemapServiceProvider',
+    ),
+  ),
   'spatie/php-structure-discoverer' => 
   array (
     'providers' => 
     array (
       0 => 'Spatie\\StructureDiscoverer\\StructureDiscovererServiceProvider',
+    ),
+  ),
+  'tomatophp/console-helpers' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TomatoPHP\\ConsoleHelpers\\ConsoleHelpersServiceProvider',
+    ),
+  ),
+  'tomatophp/filament-pwa' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TomatoPHP\\FilamentPWA\\FilamentPwaServiceProvider',
+    ),
+  ),
+  'tomatophp/filament-settings-hub' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TomatoPHP\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider',
     ),
   ),
 );

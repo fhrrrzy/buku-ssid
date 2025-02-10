@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Filament\Pages;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
@@ -71,6 +72,7 @@ class AdminPanelProvider extends PanelProvider
                 default => null,
             })
             ->plugins([
+                FilamentShieldPlugin::make(),
                 \Filafly\PhosphorIconReplacement::make()->duotone(),
                 ActivitylogPlugin::make()
                     ->label('Log')
@@ -81,8 +83,9 @@ class AdminPanelProvider extends PanelProvider
                         userMenuLabel: 'My Profile', // Customizes the 'account' link label in the panel User Menu (default = null)
                         slug: 'my-profile' // Sets the slug for the profile page (default = 'my-profile')
                     )->enableTwoFactorAuthentication(
-                        force: false, // force the user to enable 2FA before they can use the application (default = false)
+                        force: true, // force the user to enable 2FA before they can use the application (default = false)
                     ),
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 \Hasnayeen\Themes\ThemesPlugin::make(),
                 GlobalSearchModalPlugin::make()
                     ->slideOver(),

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->foreignId('opd_id')->constrained('opds')->onDelete('cascade');
             $table->foreignId('bidang_id')->constrained('bidangs')->onDelete('cascade');
-            $table->json('photos');
+            $table->json('photos')->nullable();
             $table->timestamps();
         });
     }

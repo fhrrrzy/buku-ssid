@@ -23,6 +23,7 @@ use Filament\Tables\Actions\BulkActionGroup;
 use App\Filament\Resources\WifiResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\WifiResource\RelationManagers;
+use Filament\Tables\Actions\ViewAction;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 use Rmsramos\Activitylog\Actions\ActivityLogTimelineTableAction;
 use Rmsramos\Activitylog\RelationManagers\ActivitylogRelationManager;
@@ -152,7 +153,6 @@ class WifiResource extends Resource
                             ->imageCropAspectRatio('16:9')
                             ->imageResizeTargetWidth('1920')
                             ->imageResizeTargetHeight('1080')
-                            ->required()
                     ]),
             ]);
     }
@@ -189,6 +189,13 @@ class WifiResource extends Resource
                     ->button()
                     ->color('gray')
                     ->icon('heroicon-o-pencil'),
+                ViewAction::make()
+                    ->label('View')
+                    ->button()
+                    ->icon('heroicon-o-eye')
+                    ->slideOver()
+                    ->outlined()
+                    ->color('info'),
                 DeleteAction::make()
                     ->modalWidth('2xl')
                     ->label('Delete')
